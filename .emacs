@@ -20,17 +20,12 @@
 (add-to-list 'load-path "~/.emacs.d")
 (add-to-list 'load-path "~/.emacs.d/jade-mode")
 (add-to-list 'load-path "~/.emacs.d/enhanced-ruby-mode")
-(add-to-list 'load-path "~/.emacs.d/egg")
 (add-to-list 'load-path "~/.emacs.d/elisp/cucumber.el")
 (add-to-list 'load-path "~/.emacs.d/elisp/markdown-mode")
-
-(require 'egg)
-(require 'feature-mode)
 
 (autoload 'hobo-register-agent "hobo" "" t)
 (autoload 'hobo-register-agent-from-file "hobo" "" t)
 (autoload 'hobo-find-file "hobo" "" t)
-
 
 (require 'tramp)
 (setq tramp-default-method "ssh")
@@ -71,7 +66,6 @@
 (add-to-list 'auto-mode-alist '("\\.styl$" . stylus-mode))
 (add-to-list 'auto-mode-alist '("\\.yaml$" . yaml-mode))
 (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
-(add-to-list 'auto-mode-alist '("\\.feature$" . feature-mode))
 (add-to-list 'auto-mode-alist '("\\.text\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
