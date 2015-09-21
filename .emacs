@@ -53,9 +53,9 @@
 (add-to-list 'auto-mode-alist '("\\.jsm$" . js-mode))
 (add-to-list 'auto-mode-alist '("\\.css$" . css-mode))
 (add-to-list 'auto-mode-alist
-	     '("\\.\\(?:gemspec\\|irbrc\\|gemrc\\|rake\\|rb\\|ru\\|thor\\)\\'" . enh-ruby-mode))
+	     '("\\.\\(?:gemspec\\|irbrc\\|gemrc\\|rake\\|rb\\|ru\\|thor\\)\\'" . ruby-mode))
 (add-to-list 'auto-mode-alist
-	     '("\\(Capfile\\|Gemfile\\(?:\\.[a-zA-Z0-9._-]+\\)?\\|[rR]akefile\\)\\'" . enh-ruby-mode))
+	     '("\\(Capfile\\|Gemfile\\(?:\\.[a-zA-Z0-9._-]+\\)?\\|[rR]akefile\\)\\'" . ruby-mode))
 (add-to-list 'auto-mode-alist '("\\.mm$" . objc-mode))
 (add-to-list 'auto-mode-alist '("\\.haml$" . haml-mode))
 (add-to-list 'auto-mode-alist '("\\.hbs$" . hbs-mode))
@@ -79,14 +79,6 @@
 
 (color-theme-dark-laptop)
 (put 'narrow-to-region 'disabled nil)
-
-(add-to-list 'load-path "~/.emacs.d/mo-git-blame")
-
-(autoload 'mo-git-blame-file "mo-git-blame" nil t)
-(autoload 'mo-git-blame-current "mo-git-blame" nil t)
-
-(global-set-key [?\C-c ?g ?c] 'mo-git-blame-current)
-(global-set-key [?\C-c ?g ?f] 'mo-git-blame-file)
 
 (global-set-key [?\C-x ?p] 'previous-multiframe-window)
 
@@ -136,7 +128,6 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(egg-enable-tooltip t)
  '(js-indent-level 2)
  '(js2-basic-offset 2)
  '(mouse-wheel-scroll-amount (quote (1 ((shift) . 1) ((control)))))
